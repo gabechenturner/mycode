@@ -1,7 +1,7 @@
 
 #use the code to guess your ideal vacation spot
-Bahamas=0
 Alaska=0
+Bahamas=0
 Cabo=0
 
 while True:
@@ -70,3 +70,8 @@ while True:
         break
     else:
         print("that wasn't a choice")
+
+    destinations = {'Alaska': A, 'Bahamas': B, 'Cabo': C}
+
+    winner = max(destinations, key=destinations.get)
+print(winner, 'enjoy your vacation, nerd!')
