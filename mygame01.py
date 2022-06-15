@@ -131,6 +131,6 @@ while True:
 
     if move[0] == "use":
         if "bottle of vodka" in inventory and currentRoom == "Hall" and move[1] == "bottle of vodka":
-            print("You quit anf now your drunk, 'c'est la vie")
+            print("You quit and now your drunk, 'c'est la vie")
             rooms["rooms"]
             inventory.remove("bottle of vodka")
