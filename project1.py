@@ -24,6 +24,7 @@ while True:
         print("that wasn't a choice")
 
 while True:
+
     question_2=input("""Do you like the mountains?
             yes
             no
@@ -38,6 +39,7 @@ while True:
     else:
         print("that wasn't a choice")
         break
+
 while True:
     question_3=input("""Do you want lots of people?
             yes
@@ -47,8 +49,12 @@ while True:
     if question_3=="yes":
         Cabo+=1
         break
+    elif question_3=="no":
+        Bahamas+=1
+        Alaska+=1
     else:
         print("that wasn't a choice")
+
 while True:
     question_4=input("""Do you like the sand?
             yes
@@ -57,6 +63,10 @@ while True:
     if question_4=="yes":
         Cabo+=1
         Bahamas+=1
+    elif question_4=="no":
+        Alaska+=1
         break
     else:
         print("that wasn't a choice")
+
+
