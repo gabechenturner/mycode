@@ -4,8 +4,6 @@
 import sys
 import time
 
-# Replace RPG starter project with this code when new instructions are live
-
 # Character List
 # Troll, White Walker, Martian, Amorphous Blob
 def print1by1(text, delay=0.03):
@@ -33,7 +31,8 @@ def showInstructions():
     Make it to Valhalla, or just quit, either one is fine with me
 
     Commands:
-      go [north, south, east, west]
+      map [see "The Map"]
+      go  [north, south, east, west]
       use [item in inventory]
       get [item]
     ''')
@@ -47,7 +46,7 @@ def showStatus():
     """determine the current status of the player"""
     #print the player's current status
     print('---------------------------')
-    print('You are in the ' + currentRoom)
+    print(f"The {Character_name}" ' is in the ' + currentRoom)
     #print the current inventory
     print('Inventory : ' + str(inventory))
     #print an item if there is one
@@ -112,9 +111,6 @@ while True:
     showStatus()
 
     #get the player's next 'move'
-    #.split() breaks it up into an list array
-    #eg typing 'go east' would give the list
-    #['go','east']
     move = ''
     while move == '':  
         move = input('>')
@@ -122,7 +118,19 @@ while True:
     # split allows an items to have a space on them
     # get golden key is returned ["get", "golden key"]          
     move = move.lower().split(" ", 1)
+    
+    # shows the map when called
+    if move[0] == 'map':
+        print('''
 
+                  "The Map"
+
+                    Hall
+
+        Garage     Kitchen      Valhalla
+                      
+                   Basement     Mineshaft
+            ''')
     #if they type 'go' first
     if move[0] == 'go':
         #check that they are allowed wherever they want to go
